@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+
+    <!-- Carousel Start -->
+    <div class="mx-auto p-0 mb-5 w-100">
+        <div class="owl-carousel header-carousel position-relative">
+            {% for slider in imageSlider %}
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{{slider.slider.url}}">
+                <!-- <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .4);"></div> -->
+            </div>
+            {% endfor %}
+           
+        </div>
+    </div>
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-2">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="text-primary text-uppercase">About Us</h6>
+                    <h1 class="mb-4">We Are Trusted Consultance Company Since 2014</h1>
+                    <p class="mb-4">Lead Partners Consulting Limited proudly offers a diverse range of services. 
+                        We have ventured into</p>
+                    <p class="fw-medium text-dark"><i class="fa fa-check text-success me-3"></i>Travels & Logistics</p>
+                    <p class="fw-medium text-dark"><i class="fa fa-check text-success me-3"></i>Property and Merchandise Investments </p>
+                    <p class="fw-medium text-dark"><i class="fa fa-check text-success me-3"></i>Project Management and Consultancy. </p>
+                    <div class="bg-dark xyz d-flex align-items-center p-4 mt-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px; border-radius: 40px;">
+                            <i class="fa fa-phone-alt fa-2x text-dark "></i>
+                        </div>
+                        <div class="ms-3">
+                            <a href="tel:+2349121468065"><h5 class="m-0 text-light">+234-9121-468-065</h5></a>
+                        </div>
+                        <style>
+                            .xyz{
+                                background: rgb(6,13,29);
+                                background: linear-gradient(111deg, rgba(6,13,29,0.9542191876750701) 0%, rgba(16,45,70,0.8813900560224089) 43%, rgba(45,79,79,1) 100%);
+                            }
+                        </style>
+                    </div>
+                    <div class="text-dark pt-4">
+                        We collaborate with both local private and foreign partners
+                        <br><i><b>Our expertise in these key areas set us apart as industry leaders.</b></i> 
+                    </div>
+                          
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- VISION STMT  START-->
+    <div class="container mb-0">
+           <div class="d-sm-flex flex-row justify-content-between mx-auto">
+            {% for x in mission_and_vison %}
+                <div class="bg-light p-2 mt-2 shadow rounded border container" style="min-height:250px; border-radius: 6px!important;">
+                    <h6>VISION</h6>
+                    <p>{{ x.vision }}</p>
+                    <!-- <p>To focus on providing opportunities, collaborations and partnership through engagements, productive services with the aim of achieving our goals to becoming a Global Consulting Firm.</p> -->
+                    </div>
+                    <div class="p-4"></div>
+                <!--  -->
+                <div class="bg-light p-2 mt-2 shadow rounded border container" style="min-height:250px; border-radius: 6px!important;">
+                    <h6>VISION</h6>
+                    <p>{{ x.mission }}</p>
+                    <!-- <p>At LPC LTD, it is not all about business for us. Our mission is to be involved actively in engaging and collaborating with local communities through our empowerment and entrepreneurial initiatives aimed at fostering socio-economic development and paving way for a bright and prosperous future for us all in Africa and beyond..</p> -->
+                </div>
+            {% endfor %}
+           </div>
+        <div class=" xxxx mt-3 p-4 text-white">
+            <h6 style="color: aliceblue;">Value
+                <br>
+                <i>Integrity, detail-service and of course, Your perception about us precedes the reality.</i>
+            </h6>
+        </div>
+        <style>
+            .xxxx{
+                background: rgb(0,23,36);
+                background: linear-gradient(129deg, rgba(0,23,36,0.9542191876750701) 0%, rgba(59,235,247,0.8813900560224089) 43%, rgba(225,230,230,1) 100%);
+            }
+        </style>
+    </div>
+    <!-- VISION STMT  END-->
+
+    
+    <!-- VIDEO START -->
+    {% if aboutusvideo %}
+        <div class="container-fluid px-0 mt-5" style="margin: 2rem 0;">
+            <div class="video wow fadeInUp" data-wow-delay="0.1s">
+                <button type="button" class="btn-play" data-bs-toggle="modal" data-src="{{ aboutusvideo.url }}"
+                    data-bs-target="#videoModal">
+                    <span></span>
+                </button>
+        
+                <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content rounded-0">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">About Us - Lead Partners Consulting Limited</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- 16:9 aspect ratio -->
+                                <div class="ratio ratio-16x9">
+                                    <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
+                                        allowscriptaccess="always" allow="autoplay"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <p class="container my-3" style="background-color: rgb(20, 54, 109); padding: 4rem 0; font-size: larger; text-align: center; border-radius: 20px; cursor: pointer;  box-shadow: 2px 2px 4px black;">
+        No video available.</p>
+    {% endif %}
+
+
+    <!-- Subsidiaries Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="text-secondary text-uppercase">WE ARE NOT ALONE</h6>
+                <h1 class="mb-5">Subsidiaries </h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item text-center">
+                    <img class="p-2 mx-auto mb-2" src="{% static 'img/sub/Helen and WellintonLead Partners Consulting LTD.jpg' %}" style="width: 100%;height:120px" alt="Helen and WellintonLead Partners Consulting LTD ">
+                    <h5 class="mb-1">Helen and Wellinton</h5>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="p-2 mx-auto mb-2" src="{% static 'img/sub/Lead Reality Global Enterprise - Lead Partners Consultance Ltd.jpg' %}" style="width:100%;height:120px" alt="Lead Reality Global Enterprise - Lead Partners Consultance Ltd">
+                    <h5 class="mb-1">Lead Reality Global Enterprise</h5>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="p-2 mx-auto mb-2" src="{% static 'img/sub/Distinct Media and Creations and Events enterprise - Lead Partners Consultance ltd.jpg' %}" style="width:100%; height:120px" alt="Distinct Media and Creations and Events enterprise - Lead Partners Consultance ltd">
+                    <h5 class="mb-1">Distinct Media and Creations and Events enterprise</h5>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Subsidiaries End -->
+
+{% endblock %}

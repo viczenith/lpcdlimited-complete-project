@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Page{% endblock %}
+
+{% block content %}
+
+    <!-- History start  -->
+    <main class="container py-5 px-3" style=" background-color: rgb(241, 240, 240); border-radius: 50px;">
+        <h5 class="pt-1">About Us</h5>
+        <div class="container" style="text-align:justify;">
+            <p>The 24th day, September 2014 birthed the humble beginning of a small enterprise in the Western region of Nigeria. </p>
+
+            <p>Poised with a clear vision to attain great heights on the sub-Saharan region and global level, our first operations and service rendered were media solutions which included advertorials, radio jingles, outdoor advertising and other forms of publicity. </p>
+
+            <p>As an aspiring firm, we focused tentatively on providing strategic solutions and brilliant advisory to our budding customer base at that time. As we proceeded as a business enterprise, in 2016, there was a huge deficit in the property and merchandise investment industry in our operational community. As a focused and purpose driven company, we saw an emerging opportunity in the industry and decided to venture officially in August of same year. </p>
+
+            <p>That same year, we incorporated our first property and investment enterprise. In furtherance of our successive brilliant strides, we rode on this pedestal to becoming a force to reckon with, in a space of three years through our active innovative involvement and cutting-edge ideas targeted at revitalizing and promoting the practice.</p>
+
+            <p>It is on note, that within the years of 2016- 2019, before we took another bold step to venture into the travel and logistics sector, we have successfully built a wonderful portfolio in the property investment industry by providing our customers with professional and technical support services through our participations in property sales, development and construction. The emergence of Lead Partners Consulting Limited in 2021 brought about the merging of all services. </p>
+
+            <h6>Company Introduction</h6>
+
+            <p>Lead Partners Consulting limited trademarked LPC LTD officially became a private limited liability company in December 2021 after receiving our corporate licensing from the Nigerian Companies Registry. 
+                Prior to the establishment of LPC LTD, services offered at subsidiary levels were separate as such the need to merge and unify our operations as a corporate entity. 
+            </p>
+
+            <p>Today, Lead Partners Consulting Limited proudly offers a diverse range of services. We have ventured into travels & logistics, property and merchandise investments, project management and consultancy collaborating with both local private and foreign partners. </p>
+            
+            <h6><i>Our expertise in these key areas set us apart as industry leaders. </i></h6><br><br>
+
+            <!-- VIDEO START -->
+            {% if aboutusvideo %}
+                <div class="container-fluid px-0 mt-5" style="margin: 2rem 0;">
+                    <div class="video wow fadeInUp" data-wow-delay="0.1s">
+                        <button type="button" class="btn-play" data-bs-toggle="modal" data-src="{{ aboutusvideo.url }}"
+                            data-bs-target="#videoModal">
+                            <span></span>
+                        </button>
+                
+                        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content rounded-0">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">About Us - Lead Partners Consulting Limited</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- 16:9 aspect ratio -->
+                                        <div class="ratio ratio-16x9">
+                                            <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
+                                                allowscriptaccess="always" allow="autoplay"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <p style="background-color: rgb(20, 54, 109); padding: 4rem 0; font-size: larger; text-align: center; border-radius: 20px; cursor: pointer; margin: 2rem 0; box-shadow: 2px 2px 4px black;">
+                No video available.</p>
+            {% endif %}
+     
+            
+            <!-- VIDEO END -->
+            <div class="container row mx-auto" style="margin-top: 3rem;">
+                {% for x in mission_and_vison %}
+                <div class="col-sm mx-auto">
+                    <div class="bg-light shadow p-3 rounded border mt-3" style="min-height: 220px; border-radius: 6px!important;">
+                        <h6>VISION</h6>
+                        <p>{{ x.vision }}</p>
+                    </div>
+                </div>
+                <!--  --> 
+                <div class="col-sm mx-auto">
+                    <div class="bg-light shadow p-3 rounded border mt-3" style="min-height: 220px; border-radius: 6px!important;">
+                        <h6>MISSION</h6>
+                        <p>{{ x.mission }}</p>
+            
+                    </div>
+                </div>
+                {% endfor %}
+                <div class=" xxxx mt-3 p-4 text-white">
+                    <h6 style="color: aliceblue;">Value
+                        <br>
+                        <i>Integrity, detail-service and of course, Your perception about us precedes the reality.</i>
+                    </h6>
+                </div>
+                <style>
+                    .xxxx{
+                        background: rgb(0,23,36);
+                        background: linear-gradient(129deg, rgba(0,23,36,0.9542191876750701) 0%, rgba(59,235,247,0.8813900560224089) 43%, rgba(225,230,230,1) 100%);
+                    }
+                </style>
+            </div>
+        </div>
+    </main>
+    <!-- History End  -->
+{% endblock %}

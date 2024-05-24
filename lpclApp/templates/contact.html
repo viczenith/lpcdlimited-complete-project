@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="text-secondary text-uppercase">Contact us</h6>
+                    <h1 class="mb-4">GET IN TOUCH</h1>
+                    <p class="mb-4">Contact our customer help desk and we will be in touch with you shortly.</p>
+                    <div>
+                        <img width="200" src="{% static 'img/lead partners ltd lpclimited logo.PNG' %}" alt="lead partners ltd lpclimited logo">
+                    </div>
+                    <p class="text-primary">
+                        <h6><i class="fa fa-map-marker" aria-hidden="true"></i>
+                            West Africa,  Lagos , Nigeria.</h6>
+                        <div class=""><i class="fa fa-envelope me-3"></i>
+                            <a href="mailTo:info@lpclimited.com" class="text-primary">info@lpclimited.com</a>
+                        </div>
+                        <div class="">
+                            <i class="fa fa-phone-alt me-3"></i>
+                            <a href="tel:(234) 9124-8065" class="text-primary">(234) 9124-8065</a>
+                        </div>
+                    </p>
+                </div>
+                <div class="col-sm-6 p-1 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="bg-white p-1 h-100 d-flex align-items-center">
+                       
+                        <form method="post">
+                            {% if messages %}
+                            <div class="messages">
+                                {% for message in messages %}
+                                <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                                    {{ message }}
+                                </div>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+
+                            {% csrf_token %}
+                            <div class="row g-3 bg-white xyzz shadow p-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="phone_number" required>
+                                        <label for="phone_number">Phone Number</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 150px" required></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn xyzz w-100 py-3" type="submit">Send Message</button>
+                                </div>
+                            </div>
+                            <style>
+                                .xyzz{
+                                    border-radius: 20px;
+                                    background: rgb(245,246,249);
+                                    background: linear-gradient(326deg, rgba(245,246,249,0.9542191876750701) 0%, rgba(225,225,226,0.8813900560224089) 43%, rgba(45,79,79,1) 100%);
+                                    box-shadow: 4px 4px 8px black;
+                                }
+                                .xyzz input{
+                                    border-radius: 10px;
+                                }
+                                .xyzz textarea{
+                                    border-radius: 10px;
+                                }
+                                .xyzz button:hover{
+                                    background: rgb(227,233,235);
+                                    background: linear-gradient(326deg, rgba(227,233,235,0.9542191876750701) 0%, rgba(153,191,193,0.8813900560224089) 43%, rgba(45,79,79,1) 100%);
+                                }
+                            </style>
+                        </form>
+   
+   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+{% endblock %}

@@ -1,0 +1,65 @@
+    {% load static %}
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light d-none d-lg-block">
+        <div class="row align-items-center top-bar">
+            <div class="col-lg-3 col-md-12 text-center text-lg-start">
+                <a href="./" class="navbar-brand m-0 p-0">
+                    <h1 class="text-dark m-0">Lead Partners Consulting LTD</h1>
+                </a>
+            </div>
+            <div class="col-lg-9 col-md-12 text-end">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <i class="far fa-envelope-open text-primary me-2"></i>
+                    <p class="m-0"><a href="mailto:leadpartnerscltd@gmail.com" >leadpartnerscltd@gmail.com</a></p>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center sos-links">
+                    <a class="btn btn-sm-square text-primary me-1" href="https://www.facebook.com/leadpartnersc.ltd"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square text-primary me-0" href="https://www.instagram.com/leadpartnersc.ltd"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <!-- logo start -->
+    
+    <!-- logo end -->
+    <div class="container-fluid nav-bar bg-transparent">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
+            <a href="./" class="navbar-brand d-flex text-dark align-items-center m-0 p-0 d-lg-none">
+                <h1 class="text-dark m-0 ps-4">
+                    Lead Partners Consulting LTD</h1>
+            </a>
+            <button class="navbartoggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+               <div class="d-flex flex-row justify-content-between w-100">
+                <div class="w-25 p-2 navlogo">
+                    <a href="./">
+                        <img src="{% static 'img/lead partners ltd lpclimited logo2.PNG' %}" width="30px" alt="lead partners ltd lpclimited logo" >
+                    </a>
+                </div>
+                <div class="navbar-nav me-auto w-75">
+                    <a href="/" class="nav-item nav-link">Home</a>
+                    <a href="about" class="nav-item nav-link ">About Us</a>
+                    <a href="subsidiaries" class="nav-item nav-link">Subsidiaries</a>
+                    <a href="service" class="nav-item nav-link">Our Services</a>
+                    <a href="contact" class="nav-item nav-link">Contact Us</a>
+                </div>
+               </div>
+                <!--  -->
+            </div>
+        </nav>
+    </div>
+
+    <!-- Navbar End -->

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Business Registration/Consulting Set up{% endblock %}
+
+{% block content %}
+    <div class="more_services container"> 
+        <div id="Business-Registration/Consulting-Set-up">
+            <h5 class="ps-4">Business Registration/Consulting Set up </h5>
+            <div class="row container-fluid mx-auto">
+                {% for x in business_registration_consulting_setup %}
+                <div class="col-sm-3">
+                    <div class="p-1">
+                        <a href="{{x.image.url}}">
+                            <img style="border-radius: 20px; box-shadow: 4px 4px 8px black;" src="{{x.image.url}}" alt="img/biz/Business RegistrationConsulting Set up lead partners consultance ltd 1" width="100%">
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+                
+            </div>
+
+        </div>
+    </div>
+    <!-- Footer Start -->
+    
+{% endblock %}

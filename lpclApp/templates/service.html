@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Service Page{% endblock %}
+
+{% block content %}
+
+    <!-- Service slide Start -->
+    <div class="container-fluid py-5 px-4 px-lg-0">
+        <div class="row container mx-auto">
+            <div class="col mx-auto">
+                <div class="mx-auto">
+                    <div class="text-center text-lg-start wow fadeInUp" data-wow-delay="0.1s">
+                        <h6 class="text-secondary text-uppercase">Our Services</h6>
+                        <h1 class="mb-5">Experience Our Unique Blend of Services</h1>
+                    </div>
+                    <div class="owl-carousel service-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="p-4 hova" style="cursor: pointer; background-color: rgb(241, 243, 243); box-shadow: 4px 4px 8px rgb(153, 153, 153); border-radius: 20px;">
+                            <div class="d-flex align-items-center justify-content-center bg-white mb-4" style="width: 75px; height: 75px; border-radius: 50%;">
+                                <div><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-cloud-lightning text-primary" viewBox="0 0 16 16">
+                                    <path d="M13.405 4.027a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 10H13a3 3 0 0 0 .405-5.973M8.5 1a4 4 0 0 1 3.976 3.555.5.5 0 0 0 .5.445H13a2 2 0 0 1 0 4H3.5a2.5 2.5 0 1 1 .605-4.926.5.5 0 0 0 .596-.329A4 4 0 0 1 8.5 1M7.053 11.276A.5.5 0 0 1 7.5 11h1a.5.5 0 0 1 .474.658l-.28.842H9.5a.5.5 0 0 1 .39.812l-2 2.5a.5.5 0 0 1-.875-.433L7.36 14H6.5a.5.5 0 0 1-.447-.724z"/>
+                                  </svg></i></div>
+
+                            </div>
+                            <h4 class="mb-3">Projects and Technical Services</h4>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Expert Hands just for you</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Rapid and Quick response System</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Support 24/7</p>
+                            <a href="{% url 'PROJECT_TECHNICAL_SERVICES_page' %}" class="btn hovabtn bg-white text-primary w-100 mt-2">Know More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-square" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707z"/>
+                              </svg></a>
+                        </div>
+
+                        <div class="p-4 hova" style="cursor: pointer; background-color: rgb(241, 243, 243); box-shadow: 4px 4px 8px rgb(153, 153, 153); border-radius: 20px;">
+                            <div class="d-flex align-items-center justify-content-center bg-light mb-4" style="width: 75px; height: 75px; border-radius: 50%;">
+                                <div><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-bookmarks-fill text-primary" viewBox="0 0 16 16">
+                                    <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5z"/>
+                                    <path d="M4.268 1A2 2 0 0 1 6 0h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L13 13.768V2a1 1 0 0 0-1-1z"/>
+                                  </svg></div>
+                            </div>
+                            <h4 class="mb-3">Business Registration/ Consulting Set up</h4>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>CAC Registration</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>TAX Payment Filling </p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i> General Merchandise</p>
+                            <a href="{% url 'BUSINESS_REGISTRATION_CONSULTING_SETUP_page' %}" class="btn hovabtn bg-white text-primary w-100 mt-2">Know More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-square" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707z"/>
+                              </svg></i></a>
+                        </div>
+
+                        <div class="p-4 hova" style="cursor: pointer; background-color: rgb(241, 243, 243); box-shadow: 4px 4px 8px rgb(153, 153, 153); border-radius: 20px;">
+                            <div class="d-flex align-items-center justify-content-center bg-white mb-4" style="width: 75px; height: 75px; border-radius: 50%;">
+                                <div style="rotate: -25deg;"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-airplane" viewBox="0 0 16 16">
+                                    <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849m.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1s-.458.158-.678.599"/>
+                                  </svg>
+                                </div>
+                            </div>
+                            <h4 class="mb-3">Travel Support Services</h4>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Tours/Education/Business</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Visa Support</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>General Travel Information</p>
+                            <a href="{% url 'TRAVELS_SUPPORT_SERVICES_page' %}" class="btn hovabtn bg-white text-primary w-100 mt-2">Know More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-square" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707z"/>
+                              </svg></a>
+                        </div>
+                        
+                        <div class="p-4 hova" style="cursor: pointer; background-color: rgb(241, 243, 243); box-shadow: 4px 4px 8px rgb(153, 153, 153); border-radius: 20px;">
+                            <div class="d-flex align-items-center justify-content-center bg-light mb-4" style="width: 75px; height: 75px; border-radius: 50%;">
+                                <div><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-collection-play text-primary" viewBox="0 0 16 16">
+                                    <path d="M2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3m2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1m2.765 5.576A.5.5 0 0 0 6 7v5a.5.5 0 0 0 .765.424l4-2.5a.5.5 0 0 0 0-.848z"/>
+                                    <path d="M1.5 14.5A1.5 1.5 0 0 1 0 13V6a1.5 1.5 0 0 1 1.5-1.5h13A1.5 1.5 0 0 1 16 6v7a1.5 1.5 0 0 1-1.5 1.5zm13-1a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-.5-.5h-13A.5.5 0 0 0 1 6v7a.5.5 0 0 0 .5.5z"/>
+                                  </svg></div>
+                            </div>
+                            <h4 class="mb-3">Media and Innovative Designers</h4>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Adverts and Brand Promotion</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Publications</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Branding and Product Support </p>
+                            <a href="{% url 'MEDIA_INNOVATION_DESIGNERS_page' %}" class="btn hovabtn bg-white text-primary w-100 mt-2">Know More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-square" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707z"/>
+                              </svg></a>
+                        </div>
+                        
+                        <div class="p-4 hova" style="cursor: pointer; background-color: rgb(241, 243, 243); box-shadow: 4px 4px 8px rgb(153, 153, 153); border-radius: 20px;">
+                            <div class="d-flex align-items-center justify-content-center bg-white border-white mb-4" style="width: 75px; height: 75px; border-radius: 50%;">
+                                <div><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-houses" viewBox="0 0 16 16">
+                                    <path d="M5.793 1a1 1 0 0 1 1.414 0l.647.646a.5.5 0 1 1-.708.708L6.5 1.707 2 6.207V12.5a.5.5 0 0 0 .5.5.5.5 0 0 1 0 1A1.5 1.5 0 0 1 1 12.5V7.207l-.146.147a.5.5 0 0 1-.708-.708zm3 1a1 1 0 0 1 1.414 0L12 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l1.854 1.853a.5.5 0 0 1-.708.708L15 8.207V13.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 4 13.5V8.207l-.146.147a.5.5 0 1 1-.708-.708zm.707.707L5 7.207V13.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5V7.207z"/>
+                                  </svg></div>
+                            </div>
+                            <h4 class="mb-3">Investment in Real Estate</h4>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Landed Property</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i> Homes </p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Business</p>
+                            <a href="{% url 'MANUFACTURING_RELATED_SERVICES_INVESTMENT_REAL_ESTATE_page' %}" class="btn hovabtn bg-white text-primary w-100 mt-2">Know More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-square" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707z"/>
+                              </svg></a>
+                        </div>
+
+                        <div class="p-4 hova" style="cursor: pointer; background-color: rgb(241, 243, 243); box-shadow: 4px 4px 8px rgb(153, 153, 153); border-radius: 20px;">
+                            <div class="d-flex align-items-center justify-content-center bg-light mb-4" style="width: 75px; height: 75px; border-radius: 50%;">
+                                <div><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-cone-striped" viewBox="0 0 16 16">
+                                    <path d="m9.97 4.88.953 3.811C10.159 8.878 9.14 9 8 9s-2.158-.122-2.923-.309L6.03 4.88C6.635 4.957 7.3 5 8 5s1.365-.043 1.97-.12m-.245-.978L8.97.88C8.718-.13 7.282-.13 7.03.88L6.275 3.9C6.8 3.965 7.382 4 8 4s1.2-.036 1.725-.098m4.396 8.613a.5.5 0 0 1 .037.96l-6 2a.5.5 0 0 1-.316 0l-6-2a.5.5 0 0 1 .037-.96l2.391-.598.565-2.257c.862.212 1.964.339 3.165.339s2.303-.127 3.165-.339l.565 2.257z"/>
+                                  </svg></div>
+                            </div>
+                            <h4 class="mb-3">Manufacturing and Related Services </h4>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Construction</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Supervision</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Estimation</p>
+                            <a href="{% url 'MANUFACTURING_RELATED_SERVICES_INVESTMENT_REAL_ESTATE_page' %}" class="btn hovabtn bg-white text-primary w-100 mt-2">Know More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right-square" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707z"/>
+                              </svg></a>
+                        </div>
+                    </div>
+                    <style>
+                        .hova:hover{
+                            background-color: rgb(230, 227, 227) !important;
+                        }
+                        .hovabtn{
+                            border-radius: 20px;
+                        }
+                        .hovabtn:hover{
+                            background-color: rgb(120, 125, 126) !important;
+                            color: white !important;
+                        }
+                    </style>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  {% endblock %}

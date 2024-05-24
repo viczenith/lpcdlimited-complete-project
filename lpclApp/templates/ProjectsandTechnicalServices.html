@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects and Technical Services{% endblock %}
+
+{% block content %}
+
+     <!-- MORE SERVICES  START-->
+     <div class="more_services container">
+        <div id="Projects-and-Technical-Services">
+            <h5 class="ps-4">Projects and Technical Services</h5>
+            <div class="row container-fluid mx-auto">
+                {% for x in projects_and_technical_services %}
+                <div class="col-sm-4">
+                    <div class="p-1">
+                        <a href="{{x.image.url}}">
+                            <img style="border-radius: 20px; box-shadow: 4px 4px 8px black;" src="{{x.image.url}}" width="100%">
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+     </div>
+</div>
+
+<!-- MORE SERVICES  END-->
+    
+{% endblock %}

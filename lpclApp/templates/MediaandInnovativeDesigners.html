@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Media and Innovative Designers{% endblock %}
+
+{% block content %}
+
+     <!-- MORE SERVICES  START-->
+    <div class="more_services container"> 
+        <div id="Media-and-Innovative-Designers">
+            <h5 class="ps-4">Media and Innovative Designers</h5>
+            {% for x in media_and_innovative_designers %}
+            <div class="row container-fluid mx-auto">
+                <div class="col-sm-3">
+                    <a href="{{x.image.url}}">
+                        <img style="border-radius: 20px; box-shadow: 4px 4px 8px black;" src="{{x.image.url}}" alt="" width="100%">
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+     </div>    
+</div>
+
+<!-- MORE SERVICES  END-->
+{% endblock %}

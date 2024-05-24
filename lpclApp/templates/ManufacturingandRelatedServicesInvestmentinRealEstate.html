@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Manufacturing and Related Services /Investment in Real Estate{% endblock %}
+{% block content %}
+
+     <!-- MORE SERVICES  START-->
+    <div class="more_services container"> 
+        
+        <div id="Manufacturing-and-Related-Services">
+            <h5 class="ps-4">Manufacturing and Related Services /Investment in Real Estate</h5>
+            <div class="row container-fluid mx-auto">
+                {% for x in manufacturing_and_related_service %}
+                <div class="col-sm-3">
+                    <div class="p-1">
+                        <a href="{{x.image.url}}">
+                            <img style="border-radius: 20px; box-shadow: 4px 4px 8px black;" src="{{ x.image.url }}" alt="img/mft/Manufacturing and Related Services - lead partners consultance ltd 1" width="100%">
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+        
+</div>
+
+<!-- MORE SERVICES  END-->
+{% endblock %}

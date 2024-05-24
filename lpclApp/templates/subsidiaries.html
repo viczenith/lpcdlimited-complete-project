@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Subsidiaries Page{% endblock %}
+
+{% block content %}
+
+    <!-- subsidiaries start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="text-secondary text-uppercase">WE ARE NOT ALONE</h6>
+                <h1 class="mb-5">Subsidiaries </h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item text-center">
+                    <img class="p-2 mx-auto mb-2" src="{% static 'img/sub/Helen and WellintonLead Partners Consulting LTD.jpg' %}" style="width: 100%;height:120px" alt="Helen and WellintonLead Partners Consulting LTD ">
+                    <h5 class="mb-1">Helen and Wellinton</h5>
+                </div>
+                <div class="testimonial-item text-center">
+                        <img class="p-2 mx-auto mb-2" src="{% static 'img/sub/Lead Reality Global Enterprise - Lead Partners Consultance Ltd.jpg' %}" style="width:100%;height:120px" alt="Lead Reality Global Enterprise - Lead Partners Consultance Ltd">
+                    <h5 class="mb-1">Lead Reality Global Enterprise</h5>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="p-2 mx-auto mb-2" src="{% static 'img/sub/Distinct Media and Creations and Events enterprise - Lead Partners Consultance ltd.jpg' %}" style="width:100%; height:120px" alt="Distinct Media and Creations and Events enterprise - Lead Partners Consultance ltd">
+                    <h5 class="mb-1">Distinct Media and Creations and Events enterprise</h5>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- subsidiaries end -->
+{% endblock %}
